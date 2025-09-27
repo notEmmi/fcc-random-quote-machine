@@ -7,10 +7,14 @@
 .App {
   background-color: white;
   color: var(--liver);
+  height: 100vh;
 }
 
 
-#QuoteBox {
-  background-color: var(--liver);
-  color: white;
+#quote-box {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
