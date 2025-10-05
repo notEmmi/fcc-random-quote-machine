@@ -18,9 +18,10 @@
 #quote-box {
   background-color: var(--liver);
   color: white;
-  min-width: 60%;
+  min-width: 50%;
   max-width: 80%;
-  aspect-ratio: 1.5/1;
+  max-height: 80vh;
+  aspect-ratio: 2/1;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -35,6 +36,8 @@
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+
 }
 
 #new-quote {
@@ -44,6 +47,8 @@
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
+  
 }
 
 #text {

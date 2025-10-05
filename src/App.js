@@ -168,11 +168,16 @@ const QuoteBox = function() {
       <p id="author">
         - {author}
       </p>
-      <div class='buttons'>
+      <div className="buttons">
         <button id="new-quote" onClick={generateQuote}>New Quote</button>
-        <button id="tweet-quote" onClick={tweetQuote}>
+        <a
+          id="tweet-quote"
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${quote}" - Kanye`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Tweet Quote
-        </button>
+        </a>
       </div>
     </div>
   );
