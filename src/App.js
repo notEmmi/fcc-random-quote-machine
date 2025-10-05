@@ -128,13 +128,30 @@ const Quotes = [
     "You basically can say anything to someone on an email or text as long as you put LOL at the end."
 ]
 
+const Authors = [
+  "Kanye West",
+  "Ye",
+  "Yeezy",
+  "Louis Vuitton Don",
+  "Yeezus",
+  "K. West",
+  "The College Dropout",
+  "Yezy"
+];
+
+
 const QuoteBox = function() {
 
   const [quote, setQuote] = useState(Quotes[0]);
+  const [author, setAuthor] = useState(Authors[0]);
   
   const generateQuote = function() {
     const index = Math.floor(Math.random() * Quotes.length);
     setQuote(Quotes[index]);
+
+    const index2 =  Math.floor(Math.random() * Authors.length);
+
+    setAuthor(Authors[index2]);
   }
 
   const tweetQuote = () => {
@@ -149,7 +166,7 @@ const QuoteBox = function() {
         "{quote}"
       </p>
       <p id="author">
-        - Kanye
+        - {author}
       </p>
       <div class='buttons'>
         <button id="new-quote" onClick={generateQuote}>New Quote</button>
