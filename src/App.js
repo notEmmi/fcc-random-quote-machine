@@ -151,7 +151,7 @@ const QuoteBox = function() {
       <p id="author">
         - Kanye
       </p>
-      <div style={{ display: 'flex', gap: '10px', marginTop: '20px' }}>
+      <div class='buttons'>
         <button id="new-quote" onClick={generateQuote}>New Quote</button>
         <button id="tweet-quote" onClick={tweetQuote}>
           Tweet Quote

@@ -30,9 +30,28 @@
 
 #tweet-quote {
   background-color: #1DA1F2;
-  color: 'white';
-  border: 'none';
-  padding: '10px 15px';
-  border-radius: '5px';
-  cursor: 'pointer' 
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#new-quote {
+  background-color: white;
+  color: var(--liver);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#text {
+  font-style: italic;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
