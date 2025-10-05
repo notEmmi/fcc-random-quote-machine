@@ -8,13 +8,31 @@
   background-color: white;
   color: var(--liver);
   height: 100vh;
-}
-
-
-#quote-box {
   display:flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+}
+
+
+#quote-box {
+  background-color: var(--liver);
+  color: white;
+  min-width: 60%;
+  max-width: 80%;
+  aspect-ratio: 1.5/1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+
+#tweet-quote {
+  background-color: #1DA1F2;
+  color: 'white';
+  border: 'none';
+  padding: '10px 15px';
+  border-radius: '5px';
+  cursor: 'pointer' 
 }

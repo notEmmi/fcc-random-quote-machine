@@ -1,5 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+
 
 // Quotes by Kanye from https://kanye.rest/
 const Quotes = [
@@ -128,29 +129,42 @@ const Quotes = [
 ]
 
 const QuoteBox = function() {
+
+  const [quote, setQuote] = useState(Quotes[0]);
   
   const generateQuote = function() {
-    const index = Math.floor(Math.random() * (Quotes.length() - 0 + 1)) + 0
-    return Quotes[index]
+    const index = Math.floor(Math.random() * Quotes.length);
+    setQuote(Quotes[index]);
   }
+
+  const tweetQuote = () => {
+    const tweetText = `"${quote}" - Kanye`;
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+    window.open(tweetUrl, '_blank');
+  }
+
   return (
     <div id="quote-box">
       <p id="text">
-        quote goes here
+        "{quote}"
       </p>
       <p id="author">
-          Kanye
+        - Kanye
       </p>
-      <button id="new-quote" onClick={generateQuote}>New Quote</button>
-      <a id="tweet-quote" href="twitter.com/intent/tweet"></a>
+      <div style={{ display: 'flex', gap: '10px', marginTop: '20px' }}>
+        <button id="new-quote" onClick={generateQuote}>New Quote</button>
+        <button id="tweet-quote" onClick={tweetQuote}>
+          Tweet Quote
+        </button>
+      </div>
     </div>
-
   );
 }
 
 function App() {
   return (
     <div className="App">
+      <h1>Quotes By Kanye</h1>
       <QuoteBox />
     </div>
   );
